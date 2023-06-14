@@ -6,23 +6,58 @@ import SectionRender from './SectionRender'
 const Container=styled.div`
 height: 100vh;
 width: 100vh;
-background-color: red;
+
 margin-top: 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-left: 25%;
+margin-right: 25%;
 `
 const SectionContainer=styled.div`
 width: 100%;
-height: 90vh;
-background-color: pink;
+height: 70vh;
+
 padding: 10px;
+margin-top: -10px;
 `
-const Title=styled.h1``
-const Button=styled.button``
+const Title=styled.div`
+
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 10px;
+margin-top: -22px;
+height: 60px;
+font-size: 32px;
+font-family: "Helvetica Neue", Arial, sans-serif;
+`
+const Button=styled.button`
+background-color: #8A4893;
+color: white;
+border: none;
+cursor: pointer;
+border-radius: 6px;
+margin-top: 35px;
+padding: 15px;
+width: 330px;
+font-weight: bold;
+font-size:16px;
+&:hover{
+    color:#8A4893;
+    background-color: white;
+    border:2px solid #8A4893;
+    margin-top: 31px;
+}
+`
 
 const ResumeBuilder = () => {
         
         const [sections,setSections]=useState(
         [
-            {name:'Profile Summery',desc:"Summary of user's information and personal details in profile section.",isEditable:true,isToggled:true},
+            {name:'Profile Summery',desc:"Summary of information and personal details related to the user that are relevant in profile section.",isEditable:true,isToggled:true},
             {name:'Academic and Cocurricular Achievements',desc:"Highlights academic and extracurricular achievements, showcasing accomplishments and involvement outside of core education.",isEditable:true,isToggled:true},
             {name:'Work Experience',desc:"Highlights professional roles, responsibilities, and achievements to showcase relevant skills and expertise.",isEditable:true,isToggled:true},
             {name:'Projects',desc:"Highlighting my diverse range of completed projects, showcasing my skills, problem-solving abilities, and project management expertise.",isEditable:true,isToggled:true},

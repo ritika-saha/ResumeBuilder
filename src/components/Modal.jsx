@@ -15,7 +15,7 @@ const Modal = ({handlemodal}) => {
    <div className="modal-container">
     <div className="modal">
       <form>
-        <input className="modal-input" type="text"  onChange={handlechange}/>
+        <input placeholder='Enter new title' className="modal-input" type="text"  onChange={handlechange}/>
       </form>
       <button className='modal-button' type='submit' onClick={modaloff}>Save</button>
     </div>
